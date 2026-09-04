@@ -9,28 +9,55 @@ import {
 } from "./components/icons";
 import MenuSection from "./components/menu-section";
 import Navbar from "./components/navbar";
-import { businessInfo } from "./data/site";
+import { businessInfo, seoContent, siteAssets, siteUrl } from "./data/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
+  "@id": `${siteUrl}#poxtrea`,
   name: businessInfo.name,
-  description:
-    "Cafés, tostadas, smoothies, frappés y desayunos en Poxtrea, Madrid.",
+  description: seoContent.description,
+  url: siteUrl,
+  image: [siteAssets.logoBlack, siteAssets.openGraph],
   address: {
     "@type": "PostalAddress",
     streetAddress: "C. de los Hermanos García Noblejas, 18",
-    addressLocality: "Ciudad Lineal, Madrid",
+    addressLocality: "Ciudad Lineal",
+    addressRegion: "Madrid",
     postalCode: "28037",
     addressCountry: "ES",
   },
   hasMap: businessInfo.mapsUrl,
   priceRange: businessInfo.priceRange,
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: businessInfo.rating.numericValue,
-    bestRating: 5,
-    ratingCount: businessInfo.rating.reviewCount,
+  servesCuisine: ["Café", "Desayunos"],
+  amenityFeature: [
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Consumo en local",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Recogida",
+      value: true,
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Carta de Poxtrea",
+    itemListElement: [
+      "Cafés",
+      "Tostadas",
+      "Smoothies",
+      "Frappés",
+      "Bocadillos",
+      "Infusiones",
+      "Bebidas",
+      "Extras",
+    ].map((name) => ({
+      "@type": "OfferCatalog",
+      name,
+    })),
   },
 };
 
@@ -44,7 +71,7 @@ export default function Home() {
           <div className="hero__overlay" aria-hidden="true" />
           <div className="hero__inner">
             <div className="hero__copy">
-              <span className="eyebrow eyebrow--light">CAFÉ · TOSTADAS · MADRID</span>
+              <span className="eyebrow eyebrow--light">CAFETERÍA · DESAYUNOS · MADRID</span>
               <h1 id="hero-title" className="hero__title">
                 Tu pausa
                 <br />
@@ -121,8 +148,8 @@ export default function Home() {
                 <span>alegra el día.</span>
               </h2>
               <p className="intro-copy__lead">
-                Un sitio para desayunar sin prisa, hacer una pausa o llevarte
-                algo rico.
+                Poxtrea es una cafetería en Ciudad Lineal para desayunos en
+                Madrid sin prisa, una pausa de café o algo rico para llevar.
               </p>
             </div>
 
