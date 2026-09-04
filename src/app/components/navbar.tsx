@@ -53,7 +53,7 @@ export default function Navbar() {
             <Image
               className="brand__logo"
               src="/brand/poxtrea-logo-black.png"
-              alt="Poxtrea"
+              alt="Logotipo de Poxtrea"
               width={168}
               height={56}
               priority

@@ -1,0 +1,23 @@
+[tools]
+node = "24"
+pnpm = "11"
+
+[tasks.build]
+description = "Compila la aplicación"
+run = "pnpm build"
+
+[tasks.start]
+description = "Inicia la aplicación en producción"
+run = "pnpm start"
+
+[tasks.lint]
+description = "Ejecuta ESLint"
+run = "pnpm lint"
+
+[tasks.typecheck]
+description = "Comprueba los tipos de TypeScript"
+run = "tsc --noEmit"
+
+[tasks.clean]
+description = "Elimina artefactos generados"
+run = "rm -rf .next node_modules"
