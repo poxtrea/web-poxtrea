@@ -199,7 +199,7 @@ export const menuItems: MenuItem[] = [
   { category: "Infusiones", name: "Chai", price: "3,70 € / 4,50 €" },
   { category: "Infusiones", name: "Matcha", price: "3,70 € / 4,50 €" },
 
-  { category: "Bebidas", name: "Cola Cao", price: "1,90 €" },
+  { category: "Bebidas", name: "ColaCao", price: "1,90 €" },
   { category: "Bebidas", name: "Chocolate a la taza", price: "2,50 €" },
   { category: "Bebidas", name: "Vaso de leche", price: "1,90 €" },
   { category: "Bebidas", name: "Refrescos", price: "3,00 €" },
@@ -232,7 +232,7 @@ export const menuItems: MenuItem[] = [
 
 export const menuNotes = {
   toast:
-    "La tostada incluye café, té o Cola Cao tamaño S. Tamaño L: suplemento de 0,50 €.",
+    "Todas las tostadas incluyen café, té o ColaCao en versión pequeña. Por 0,50 € más, puedes pedir la bebida en versión grande.",
   sizes: "Cuando aparecen dos precios, corresponden a tamaños S / L.",
   frappe: "Los frappés están disponibles con base de café o vainilla.",
 };
