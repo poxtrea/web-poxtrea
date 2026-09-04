@@ -18,7 +18,7 @@ export default function Footer() {
             <Image
               className="footer-brand__logo"
               src="/brand/poxtrea-logo-white.png"
-              alt="Poxtrea"
+              alt="Logotipo de Poxtrea"
               width={220}
               height={73}
             />
