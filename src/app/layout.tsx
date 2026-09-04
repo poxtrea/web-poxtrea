@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lilita_One, Poppins } from "next/font/google";
 import "./globals.css";
 import { siteAssets, seoContent, siteUrl } from "./data/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const displayFont = Lilita_One({
   variable: "--font-display",
@@ -72,11 +73,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="es"
-      className={`${displayFont.variable} ${bodyFont.variable}`}
-    >
-      <body>{children}</body>
-    </html>
+    <>
+      <html
+        lang="es"
+        className={`${displayFont.variable} ${bodyFont.variable}`}
+      >
+        <body>{children}</body>
+      </html>
+      <Analytics />
+    </>
   );
 }
