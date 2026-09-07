@@ -94,7 +94,7 @@ export const menuItems: MenuItem[] = [
     name: "Tosta de Nutella y frutos rojos",
     price: "3,90 €",
   },
-  { category: "Tostadas", name: "Tosta de las ibéricas", price: "6,00 €" },
+  { category: "Tostadas", name: "Tosta de lascas ibéricas", price: "6,00 €" },
   { category: "Tostadas", name: "Tosta nórdica", price: "6,50 €" },
   { category: "Tostadas", name: "Tosta green", price: "5,90 €" },
   { category: "Tostadas", name: "Tosta Healthy", price: "7,00 €" },
